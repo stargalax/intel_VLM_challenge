@@ -57,7 +57,7 @@ Once all embeddings were saved, we switched to *Google Colab* for building the v
 import faiss
 index = faiss.IndexFlatL2(512)
 index.add(image_embeddings.numpy())
-
+```
 ## Features
 
 - Text-to-Image Search  
@@ -65,21 +65,6 @@ index.add(image_embeddings.numpy())
 - Shows Top 10 closest matches  
 - Clean Gradio Interface  
 - Robust design using pre-generated embedding batches
-
-## Contributors
-
-We divided the work equally among the three team members:
-
-| Name      | Responsibilities                                                                  |
-|-----------|-----------------------------------------------------------------------------------|
-| Nivetha.R | Embedding pipeline (Jupyter Notebook), batch logic, data parsing, README writing  |
-| Nikitha.S | Colab pipeline:FAISS indexing,embedding loading,zip ordering, integration testing |
-| Nikhilaa.M| Gradio interface, image/text search                                               |
-
-## Notes for Judges
-
-- Embedding generation was done in Jupyter Notebook (offline) in batches to handle memory limits and avoid crashes.
-- We used Google Colab for FAISS indexing and running the visual search.
-- Image order was preserved using ZIP file traversal — no sorting was done.
-- The system supports both Text → Image and Image → Image search modes.
-- The UI is designed to be intuitive and lightweight for demonstration purposes.
+  
+> NOTE:  due to hardware and time constraints i wasnt able to create embeddings for all 8k imgs hences its a bit messy with its results 
+> STATUS: Yet to re start the training.
